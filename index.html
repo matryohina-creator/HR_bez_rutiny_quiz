@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR без рутины</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="quiz-card" id="quizCard">
+        <div class="quiz-image-wrap">
+          <img id="quizImage" class="quiz-image" src="./assets/1.png" alt="HR без рутины" />
+        </div>
+
+        <div class="quiz-content">
+          <div class="intro" id="introScreen">
+            <h1 class="title">🔥 Сколько времени у вас съедает HR-рутина?</h1>
+            <p class="subtitle">
+              Пройдите тест за 1 минуту и узнайте, сколько часов в неделю можно вернуть с помощью ИИ.
+            </p>
+            <button class="primary-btn" id="startBtn" type="button">Начать тест</button>
+          </div>
+
+          <div class="question-screen hidden" id="questionScreen">
+            <div class="progress-head">
+              <p class="progress-label" id="progressLabel">Вопрос 1 из 5</p>
+              <p class="progress-percent" id="progressPercent">20%</p>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <h2 class="question-title" id="questionTitle"></h2>
+            <div class="answers" id="answers"></div>
+          </div>
+
+          <div class="result-screen hidden" id="resultScreen">
+            <h2 class="result-title">😳 Вы теряете от 6 до 14 часов в неделю на рутине.</h2>
+            <p class="result-text">Это можно изменить уже в ближайший месяц.</p>
+            <p class="result-subtext">
+              Пока другие HR делают руками — вы можете стать быстрее рынка.
+            </p>
+
+            <form id="leadForm" class="lead-form" novalidate>
+              <label class="input-label" for="name">Имя</label>
+              <input class="input" id="name" name="name" type="text" required />
+
+              <label class="input-label" for="phone">Телефон</label>
+              <input class="input" id="phone" name="phone" type="tel" required />
+
+              <label class="input-label" for="telegram">Telegram</label>
+              <input class="input" id="telegram" name="telegram" type="text" required />
+
+              <button class="primary-btn" type="submit">🔥 Получить чек-лист + узнать о курсе</button>
+            </form>
+
+            <div class="success hidden" id="successMessage">
+              <p class="success-text">Спасибо! Мы скоро свяжемся с вами ❤️</p>
+              <button class="secondary-btn" id="giftBtn" type="button">
+                Получить подарок Гайд "7 задач HR, которые можно делегировать ИИ уже завтра"
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
