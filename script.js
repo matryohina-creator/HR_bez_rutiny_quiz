@@ -1,11 +1,16 @@
+const pathParts = window.location.pathname.split("/").filter(Boolean);
+const isGitHubPages = window.location.hostname.endsWith("github.io");
+const repoBase = isGitHubPages && pathParts.length > 0 ? `/${pathParts[0]}` : "";
+const assetBase = `${repoBase}/assets`;
+
 const images = [
-  "./assets/1.png",
-  "./assets/2.png",
-  "./assets/3.png",
-  "./assets/4.png",
-  "./assets/5.png",
-  "./assets/6.png",
-  "./assets/7.png",
+  `${assetBase}/1.png`,
+  `${assetBase}/2.png`,
+  `${assetBase}/3.png`,
+  `${assetBase}/4.png`,
+  `${assetBase}/5.png`,
+  `${assetBase}/6.png`,
+  `${assetBase}/7.png`,
 ];
 
 const questions = [
@@ -51,6 +56,7 @@ const successMessage = document.querySelector("#successMessage");
 const giftBtn = document.querySelector("#giftBtn");
 
 let currentQuestionIndex = 0;
+quizImage.src = images[0];
 
 function switchWithFade(screen) {
   screen.classList.remove("hidden");
